@@ -1,17 +1,16 @@
 package library;
 
-import java.util.Date;
 public class CardItem {
     Book book;
     public String borrowDate;
 
-    public CardItem(Book book, String borrowDate) {
-        this.book = book;
+    public CardItem(Book bookIsbn, String borrowDate) {
+        this.book = bookIsbn;
         this.borrowDate = borrowDate;
     }
 
     @Override
     public String toString() {
-        return book + borrowDate;
+        return "bookId "+book.isbn+" borrowed date: "+borrowDate;
     }
 }

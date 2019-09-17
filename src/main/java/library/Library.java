@@ -25,5 +25,6 @@ public class Library {
          CardItem cardItem=new CardItem(books,dateTimeInGMT.format(new Date()));
          card.addDetail(cardItem);
         }
+        System.out.println(borrower.getCardDetails(card.getDetail()));
     }
 }
