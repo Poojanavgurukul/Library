@@ -2,7 +2,7 @@ package library;
 
 public class CardItem {
     Book book;
-    public String borrowDate;
+    private String borrowDate;
 
     public CardItem(Book bookIsbn, String borrowDate) {
         this.book = bookIsbn;

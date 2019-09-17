@@ -13,12 +13,4 @@ public class Borrower {
     public List<Book> getBag() {
         return bag;
     }
-
-    public CardItem getCardDetails(List<CardItem>card){
-
-        for (CardItem item:card) {
-            return  item;
-        }
-        return null;
-    }
 }
