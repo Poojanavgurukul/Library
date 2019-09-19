@@ -17,19 +17,20 @@ public class Library {
         Borrower borrower=new Borrower();
         borrower.borrow(book);
         borrower.borrow(book2);
+        borrower.returnBook(book);
 
         SimpleDateFormat dateTimeInGMT = new SimpleDateFormat("yyyy-MMM-dd hh:mm:ss aa");
         dateTimeInGMT.setTimeZone(TimeZone.getTimeZone("GMT"));
         Card card=new Card();
         for (Book books:borrower.getBag()) {
-         CardItem cardItem=new CardItem(books,dateTimeInGMT.format(new Date()));
+         CardItem cardItem=new CardItem(books,dateTimeInGMT.format(new Date()),null);
          card.addDetail(cardItem);
         }
-        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------");
 
         for (CardItem item:card.getDetail()) {
             System.out.println(item);
         }
-        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------");
     }
 }
